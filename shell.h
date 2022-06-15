@@ -41,18 +41,34 @@ char *find_path(void);
 /* helper function for efficient free */
 void free_buffers(char **buf);
 
+/**
+ * struct builtin - contains builtins
+ * @env: environment variables
+ * @exit: exit the environment
+ * Return: Nothing
+ */
 struct builtin
 {
 	char *env;
 	char *exit;
 } builtin;
 
+/**
+ * struct info - contains some info
+ * @final_exit: exit the environment
+ * @ln_count: counts line
+ * Return: Nothing
+ */
 struct info
 {
 	int final_exit;
 	int ln_count;
 } info;
-
+/**
+ * struct flags - contains flags
+ * @interactive: interactive mode
+ * Return: nothing
+ */
 struct flags
 {
 	bool interactive;
